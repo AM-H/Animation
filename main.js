@@ -17,10 +17,10 @@ ASSET_MANAGER.queueDownload('./sprites/Dead.png');
 ASSET_MANAGER.downloadAll(() => {
 	const canvas = document.getElementById("gameWorld");
 	const ctx = canvas.getContext("2d");
-	gameEngine.init(ctx);
+	//gameEngine.init(ctx);
 	gameEngine.addEntity(new AG(gameEngine));
 	gameEngine.addEntity(new Enemy(gameEngine));
-	//gameEngine.init(ctx);
+	gameEngine.init(ctx);
 
 	gameEngine.start();
 });
